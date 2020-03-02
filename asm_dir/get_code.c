@@ -6,7 +6,7 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 15:01:11 by nabih             #+#    #+#             */
-/*   Updated: 2020/02/29 17:21:49 by chcoutur         ###   ########.fr       */
+/*   Updated: 2020/03/02 15:19:28 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int8_t				check_op(char *str, size_t size)
 	int			op_code;
 
 	op_code = 0;
-	while (g_op_tab[op_code].name != NULL && str)
+	while (g_op_tab[op_code].name != NULL && str && size > 0)
 	{
 		if (ft_strncmp(g_op_tab[op_code].name, str, size) == 0)
 		{
