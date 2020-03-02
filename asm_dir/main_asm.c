@@ -6,7 +6,7 @@
 /*   By: nabih <nabih@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 11:07:54 by nabih             #+#    #+#             */
-/*   Updated: 2020/03/02 16:07:02 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 17:01:08 by chcoutur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,18 @@ static int8_t		next_main(t_asm *a)
 		close(a->fd);
 		a->lab = sort_label(&(a->lab));
 		if (a->champ != NULL && (tmp = sort_champ(a, &(a->champ))) == NULL)
+		{
 			return (print_main_error(a, "Label error"));
+		}
 		a->champ = tmp;
 		if ((a->fd = create_new_file(a, a->file)) == ASM_ERROR)
 		{
 			clear_all(a);
 			if (a->fd < 0)
 				print_error(ASM_ERROR_OTHER, "Failed to create .cor", 0);
-			return (ASM_ERROR);
+			{
+				return (ASM_ERROR);
+			}
 		}
 		return (next_main_bis(a));
 	}
