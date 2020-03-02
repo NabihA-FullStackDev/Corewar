@@ -6,7 +6,7 @@
 /*   By: nabih <nabih@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 11:31:28 by nabih             #+#    #+#             */
-/*   Updated: 2020/02/29 14:54:03 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 15:49:40 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,14 @@ void				print_error(int error_type, char *str, int line)
 	}
 }
 
-void				error_arg_check(int pos, char *args, t_champ **ret)
+void				error_arg_check(t_asm *a, int pos, char *args, t_champ **ret)
 {
 	if (pos == -1)
 	{
 		ft_putstr_fd("Arguments not well formated -> |", 2);
 		(args != NULL) ? ft_putstr_fd(args, 2) : ft_putstr_fd("(null)", 2);
 		ft_putstr_fd("|\n", 2);
+		clear_all(a);
 		ft_memdel((void**)ret);
 	}
 }

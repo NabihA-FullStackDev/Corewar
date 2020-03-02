@@ -6,7 +6,7 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 17:09:05 by nabih             #+#    #+#             */
-/*   Updated: 2020/02/28 16:39:50 by chcoutur         ###   ########.fr       */
+/*   Updated: 2020/03/02 15:49:16 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,6 @@ t_champ				*arguments_analysis(t_asm *a)
 			ft_memmove(args, &(args[size]), ft_strlen(&(args[size])) + 1);
 		pos = (pos >= 0) ? pos + 1 : -1;
 	}
-	error_arg_check(pos, args, &ret);
+	error_arg_check(a, pos, args, &ret);
 	return (ret);
 }

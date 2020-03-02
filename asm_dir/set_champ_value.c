@@ -6,7 +6,7 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 06:55:52 by nabih             #+#    #+#             */
-/*   Updated: 2020/03/02 09:19:31 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 15:46:20 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,7 @@ int8_t				set_label(t_asm *a, t_champ *champ, char *label, int size)
 			set_label_nb(champ, label, a->pos, 2);
 		champ->type[a->pos] |= a->type;
 		label[size] = c;
+		return (ASM_SUCCESS);
 	}
-	return (ASM_SUCCESS);
+	return (ASM_ERROR);
 }
