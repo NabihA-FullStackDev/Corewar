@@ -6,7 +6,7 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 15:01:11 by nabih             #+#    #+#             */
-/*   Updated: 2020/03/02 15:19:28 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:03:24 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int8_t				get_code(t_asm *a)
 			if (is_label(a, a->line) == ASM_TRUE)
 				lab = 1;
 			if (is_empty(a->line) == ASM_FALSE
-					&& check_line(a, &lab) == ASM_ERROR)
+				&& check_line(a, &lab) == ASM_ERROR)
 				return (ASM_ERROR);
 			ft_memdel((void**)&(a->line));
 			flg = get_next_line_eof(a->fd, &(a->line), &(a->nl));

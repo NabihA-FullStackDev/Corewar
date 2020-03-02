@@ -6,7 +6,7 @@
 /*   By: jleblond <jleblond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 11:01:54 by nabih             #+#    #+#             */
-/*   Updated: 2020/03/02 15:49:56 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:17:18 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,8 @@ typedef struct		s_asm
 */
 int8_t				print_main_error(t_asm *a, char *msg);
 void				print_error(int error_type, char *str, int line);
-void				error_arg_check(t_asm *a, int pos, char *args, t_champ **ret);
+void				error_arg_check(t_asm *a, int pos,
+									char *args, t_champ **ret);
 
 /*
 ***--------------**
