@@ -6,13 +6,13 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 04:01:17 by nabih             #+#    #+#             */
-/*   Updated: 2020/01/31 04:59:18 by nabih            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:31:54 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-static void			champion_clear(t_champ **lst)
+void				champion_clear(t_champ **lst)
 {
 	t_champ		*tmp;
 

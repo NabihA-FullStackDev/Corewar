@@ -6,7 +6,7 @@
 /*   By: nabih <naali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 01:55:13 by nabih             #+#    #+#             */
-/*   Updated: 2020/02/28 22:49:40 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:32:52 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,11 @@ t_champ				*sort_champ(t_asm *a, t_champ **src)
 		{
 			tmp = champ_pullfront(src);
 			if (check_label_exist(a, &tmp) == ASM_ERROR)
+			{
+				champion_clear(src);
+				champion_clear(&dst);
 				return (NULL);
+			}
 			a->header.prog_size += champ_size_calc(tmp);
 			champ_pushfront(&dst, tmp);
 		}

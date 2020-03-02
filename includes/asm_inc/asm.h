@@ -6,7 +6,7 @@
 /*   By: jleblond <jleblond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 11:01:54 by nabih             #+#    #+#             */
-/*   Updated: 2020/03/02 16:17:18 by naali            ###   ########.fr       */
+/*   Updated: 2020/03/02 16:32:09 by naali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,6 +201,7 @@ int8_t				set_indirect(t_champ *champ, char *arg, int size, int pos);
 int8_t				set_label(t_asm *a, t_champ *champ, char *label, int size);
 t_champ				*sort_champ(t_asm *a, t_champ **src);
 int					champ_size_calc(t_champ *c);
+void				champion_clear(t_champ **lst);
 
 /*
 ***-----------------**
